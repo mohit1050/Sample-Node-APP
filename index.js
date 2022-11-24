@@ -4,8 +4,7 @@ var http = require('http');
 http
   .createServer(function (req, res) {
     res.write('Hello World :) \n'); //write a response to the client
-    res.write('Served from ' + req.socket.localAddress);
-    res.write(' ');
+    res.write('Served from ' + req.socket.localAddress + '\n');
     res.end(); //end the response
   })
   .listen(80); //the server object listens on port 80
